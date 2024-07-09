@@ -4,5 +4,5 @@
 
 Visit the following resources to learn more:
 
-- [Node.js Docs on process.argv](https://nodejs.org/docs/latest/api/process.html)
-- [Node.js process.argv Property](https://www.geeksforgeeks.org/node-js-process-argv-property/)
+- [@official@Node.js Docs on process.argv](https://nodejs.org/docs/latest/api/process.html#processargv)
+- [@video@Command Line Arguments - Cave of Programming](https://youtu.be/nr7i2HOAjeE)

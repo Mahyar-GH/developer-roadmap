@@ -32,4 +32,6 @@ Cryptanalysis is the process of attempting to break cryptographic systems, often
 
 In conclusion, cryptography is a fundamental aspect of cyber security, offering a layer of protection for sensitive data in digital networks. To effectively implement cryptography in your organization, you should be familiar with the various types of cryptography, cryptographic protocols, and key management best practices, and understand the potential threats posed by cryptanalysis.
 
-- [Cryptography for Dummies (TryHackMe)](https://tryhackme.com/room/cryptographyfordummies)
+- [@article@Cryptography for Dummies (TryHackMe)](https://tryhackme.com/room/cryptographyfordummies)
+- [@article@How to Protect Data in Transit using HMAC and Diffie-Hellman in Node.js](https://www.freecodecamp.org/news/hmac-diffie-hellman-in-node/)
+- [@feed@Explore top posts about Cryptography](https://app.daily.dev/tags/cryptography?ref=roadmapsh)

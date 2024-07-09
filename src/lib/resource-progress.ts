@@ -81,6 +81,42 @@ export async function updateResourceProgress(
   return response;
 }
 
+export function clearMigratedRoadmapProgress(
+  resourceType: string,
+  resourceId: string,
+) {
+  const migratedRoadmaps = [
+    'frontend',
+    'backend',
+    'devops',
+    'data-analyst',
+    'android',
+    'full-stack',
+    'ai-data-scientist',
+  ];
+
+  if (!migratedRoadmaps.includes(resourceId)) {
+    return;
+  }
+
+  const userId = getUser()?.id;
+  if (!userId) {
+    return;
+  }
+
+  const roadmapKey = `${resourceType}-${resourceId}-${userId}-progress`;
+  const clearedKey = `${resourceType}-${resourceId}-${userId}-cleared`;
+
+  const clearedCount = parseInt(localStorage.getItem(clearedKey) || '0', 10);
+
+  if (clearedCount >= 10) {
+    return;
+  }
+
+  localStorage.removeItem(roadmapKey);
+  localStorage.setItem(clearedKey, `${clearedCount + 1}`);
+}
+
 export async function getResourceProgress(
   resourceType: 'roadmap' | 'best-practice',
   resourceId: string,
@@ -112,11 +148,11 @@ export async function getResourceProgress(
     return loadFreshProgress(resourceType, resourceId);
   } else {
     setResourceProgress(
-        resourceType,
-        resourceId,
-        progress?.done || [],
-        progress?.learning || [],
-        progress?.skipped || [],
+      resourceType,
+      resourceId,
+      progress?.done || [],
+      progress?.learning || [],
+      progress?.skipped || [],
     );
   }
 
@@ -229,6 +265,8 @@ export function topicSelectorAll(
       `[data-group-id="check:${topicId}"]`, // Matching "check:XXXX" box of the topic
       `[data-node-id="${topicId}"]`, // Matching custom roadmap nodes
       `[data-id="${topicId}"]`, // Matching custom roadmap nodes
+      `[data-checklist-checkbox][data-checklist-id="${topicId}"]`, // Matching checklist checkboxes
+      `[data-checklist-label][data-checklist-id="${topicId}"]`, // Matching checklist labels
     ],
     parentElement,
   ).forEach((element) => {
@@ -307,11 +345,11 @@ export async function renderResourceProgress(
 }
 
 function getMatchingElements(
-  quries: string[],
+  queries: string[],
   parentElement: Document | SVGElement | HTMLDivElement = document,
 ): Element[] {
   const matchingElements: Element[] = [];
-  quries.forEach((query) => {
+  queries.forEach((query) => {
     parentElement.querySelectorAll(query).forEach((element) => {
       matchingElements.push(element);
     });

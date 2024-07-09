@@ -6,10 +6,6 @@ Some types of angular guards are `CanActivate`, `CanActivateChild`, `CanLoad`, `
 
 Visit the following resources to learn more:
 
-- [Angular Official Website](https://angular.io/api/router)
-- [Can Activate Guard](https://angular.io/api/router/CanActivate)
-- [Can Activate Child](https://angular.io/api/router/CanActivateChild)
-- [Can Deactivate](https://angular.io/api/router/CanDeactivate)
-- [Angular Can Load](https://angular.io/api/router/CanLoad)
-- [Can Match](https://angular.io/api/router/CanMatch)
-- [Resolve](https://angular.io/api/router/Resolve)
+- [@official@Angular Official Website](https://angular.dev/guide/routing)
+- [@official@Preventing unauthorized access](https://angular.dev/guide/routing/common-router-tasks#preventing-unauthorized-access)
+- [@official@Resolve](https://angular.dev/api/router/Resolve)

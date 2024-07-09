@@ -1,13 +1,13 @@
 ---
+renderer: 'editor'
 jsonUrl: '/jsons/roadmaps/frontend.json'
 pdfUrl: '/pdfs/roadmaps/frontend.pdf'
 order: 1
 briefTitle: 'Frontend'
-briefDescription: 'Step by step guide to becoming a frontend developer in 2023'
+briefDescription: 'Step by step guide to becoming a frontend developer in 2024'
 title: 'Frontend Developer'
-description: 'Step by step guide to becoming a modern frontend developer in 2023'
+description: 'Step by step guide to becoming a modern frontend developer in 2024'
 hasTopics: true
-isForkable: true
 tnsBannerLink: 'https://thenewstack.io?utm_source=roadmap.sh&utm_medium=Referral&utm_campaign=Alert'
 question:
   title: 'What is Frontend Development?'
@@ -18,7 +18,7 @@ question:
     As a front-end developer, you'll be responsible for creating the user interface of a website, to ensure it looks good and is easy to use, with great focus on design principles and user experience. You'll be working closely with designers, back-end developers, and project managers to make sure the final product meets the client's needs and provides the best possible experience for the end-users.
 dimensions:
   width: 968
-  height: 2587.63
+  height: 2775
 schema:
   headline: 'Frontend Developer Roadmap: What is Frontend Development?'
   description: 'Learn what Frontend Development is, what frontend developers do and how to become a modern frontend developer using our community-driven roadmap.'
@@ -29,9 +29,9 @@ seo:
   title: 'Frontend Developer Roadmap: What is Frontend Development?'
   description: 'Learn what Frontend Development is, what frontend developers do and how to become a modern frontend developer using our community-driven roadmap.'
   keywords:
-    - 'javascript roadmap 2023'
-    - 'frontend roadmap 2023'
-    - 'frontend developer roadmap 2023'
+    - 'javascript roadmap 2024'
+    - 'frontend roadmap 2024'
+    - 'frontend developer roadmap 2024'
     - 'guide to becoming a developer'
     - 'guide to becoming a frontend developer'
     - 'frontend developer'
